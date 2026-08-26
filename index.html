@@ -311,12 +311,33 @@
     .photo-grid{gap:12px;}
   }
 
+  /* ---------- assinatura em destaque sob a foto ---------- */
+  header{justify-content:flex-end;}
+  header .brandmark{display:none;}
+  .hero-media{display:flex; flex-direction:column; align-items:flex-start; justify-content:center; padding:0 6% 0 0;}
+  .hero-media .blob{position:relative; inset:auto; width:100%; max-width:680px; height:auto; aspect-ratio:4 / 5; clip-path:none; border-radius:180px 180px 0 0; overflow:hidden;}
+  .hero-signature{padding:18px 0 0; margin-left:clamp(16px,4vw,56px); color:var(--plum);}
+  .hero-signature-name{font-family:'Cormorant Garamond', serif; font-size:clamp(40px,4.5vw,68px); line-height:.92; letter-spacing:-.025em; color:var(--paper);}
+  .hero-signature-name em{font-style:italic; color:var(--rose-soft);}
+  .hero-signature-role{margin-top:10px; font-size:12px; letter-spacing:.34em; text-transform:uppercase; font-weight:700; color:var(--rose-soft);}
+  @media (max-width: 900px){
+    .hero-media{height:auto; min-height:0; padding:28px 7vw 0;}
+    .hero-media .blob{width:100%; height:auto; aspect-ratio:4 / 5; clip-path:none; border-radius:104px 104px 0 0;}
+    .hero-media .hero-picture, .hero-media .hero-picture img{height:100%;}
+    .hero-signature{margin-left:8px; padding-top:18px;}
+    .hero-signature-name{font-size:clamp(44px,12vw,72px);}
+    .hero-signature-role{font-size:11px; letter-spacing:.28em;}
+  }
+  @media (min-width: 901px){
+    .hero{grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);}
+    .hero-media .hero-picture img{object-fit:cover; object-position:center 42%;}
+    .hero-signature{margin-left:clamp(20px,3vw,48px);}
+  }
 </style>
 </head>
 <body>
 
 <header id="siteHeader">
-  <div class="brandmark">Chimara Emília <em>Nutricionista</em></div>
   <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
@@ -343,8 +364,12 @@
   <div class="hero-media">
     <div class="blob"><picture class="hero-picture">
       <source media="(max-width: 900px)" srcset="assets/hero-mobile.webp">
-      <img id="heroImg" src="assets/hero-desktop.webp" srcset="assets/hero-desktop.webp 1920w" sizes="100vw" width="1920" height="1080" alt="Chimara Emília, nutricionista" decoding="async" loading="eager" fetchpriority="high">
+      <img id="heroImg" src="assets/hero-mobile.webp" srcset="assets/hero-mobile.webp 1080w" sizes="(max-width: 900px) 86vw, 42vw" width="1080" height="1920" alt="Chimara Emília, nutricionista" decoding="async" loading="eager" fetchpriority="high">
     </picture></div>
+    <div class="hero-signature" aria-label="Identidade profissional">
+      <p class="hero-signature-name">Chimara <em>Emília</em></p>
+      <p class="hero-signature-role">Nutricionista</p>
+    </div>
   </div>
   <div class="scroll-cue"><div class="dot"></div><span>Role a página</span></div>
 </section>
