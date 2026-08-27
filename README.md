@@ -4,7 +4,7 @@ Versão institucional em HTML, CSS e JavaScript puros. A composição preserva o
 
 ## Imagens e desempenho
 
-O projeto combina retratos editoriais de alta qualidade para a capa com duas fotos reais fornecidas pelo usuário: sala de atendimento e recepção. As imagens fora da capa são carregadas sob demanda e incluem fontes WebP menores para celular, reduzindo a transferência sem comprometimento visual perceptível.
+O projeto combina um retrato editorial de alta qualidade para a capa, corrigido para remover a área das mãos e preservar o rosto integral, com duas fotos reais fornecidas pelo usuário: sala de atendimento e recepção. A capa prioriza WebP de 1.100 px de largura e preserva um PNG de 1.664 × 2.080 px como alternativa. As imagens fora da capa são carregadas sob demanda e incluem fontes WebP menores para celular, reduzindo a transferência sem comprometimento visual perceptível.
 
 ## Revisão antes de publicação comercial
 
