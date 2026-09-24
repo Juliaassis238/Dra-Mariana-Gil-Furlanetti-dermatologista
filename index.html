@@ -71,6 +71,11 @@
     .brand span, nav a, .menu, footer .footer-brand span { color: var(--beige); }
     .button-primary:hover, .cta .button:hover { color: var(--white); }
   </style>
+
+  <style id="logo-visibility-fix">
+    /* Keep the original beige monogram visible in the header and footer. */
+    header .brand img, footer .footer-brand img { filter: none !important; opacity: 1; visibility: visible; }
+  </style>
 </head>
 <body>
   <header id="siteHeader">
